@@ -1,3 +1,11 @@
+.category__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 552px;
+  padding: 0 20px;
+}
+
 .category__item {
   background-color: @color-smoke;
 }
@@ -18,4 +26,19 @@
   line-height: 16px;
   color: @color-black;
   text-transform: uppercase;
+}
+
+@media (min-width: @tablet-width) {
+  .category__wrapper {
+    min-height: 774px;
+    padding: 0 30px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .category__wrapper {
+    flex-direction: row;
+    min-height: 372px;
+    padding: 0 110px;
+  }
 }

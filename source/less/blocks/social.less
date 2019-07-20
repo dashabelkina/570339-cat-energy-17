@@ -1,3 +1,18 @@
+.social {
+  background-color: #564895;
+}
+
 .social__list {
   list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+@media (min-width: @tablet-width) {
+  .social {
+    display: flex;
+    justify-content: space-between;
+    flex-grow: 1;
+  }
 }

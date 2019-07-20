@@ -1,18 +1,39 @@
 .promo {
+  min-height: 503px;
   background-image: url("../img/index-background-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-color: @color-white;
   color: @color-white;
   text-align: center;
+  box-sizing: border-box;
 }
 
 .promo__title {
   font-size: 36px;
   font-weight: 400;
   line-height: 36px;
+  margin: 0;
 }
 
 .promo__slogan {
   line-height: 14px;
   text-transform: uppercase;
+}
+
+@media (min-width: @tablet-width) {
+  .promo {
+    min-height: 838px;
+    padding: 0 90px;
+    background-image: none;
+    text-align: left;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .promo {
+    min-height: 634px;
+    margin-bottom: 80px;
+    padding: 0 190px;
+    background-image: url("../img/index-background-desktop@1x.jpg");
+  }
 }
