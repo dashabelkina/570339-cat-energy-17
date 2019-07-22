@@ -1,3 +1,4 @@
+
 .result {
   background-color: @color-smoke;
 }
@@ -39,4 +40,20 @@
   text-transform: uppercase;
   background: transparent;
   border: none;
+}
+
+@media (min-width: @tablet-width) {
+  .result__stat {
+    background-color: @color-white;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .result__title {
+    background-color: @color-white;
+  }
+
+  .result__stat {
+    background-color: @color-smoke;
+  }
 }

@@ -1,4 +1,4 @@
-.promo {
+.promo__wrapper {
   min-height: 503px;
   background-image: url("../img/index-background-mobile@1x.jpg");
   background-repeat: no-repeat;
@@ -21,19 +21,29 @@
 }
 
 @media (min-width: @tablet-width) {
-  .promo {
+  .promo__wrapper {
     min-height: 838px;
-    padding: 0 90px;
     background-image: none;
     text-align: left;
+  }
+
+  .promo__title {
+    font-size: 60px;
+    line-height: 60px;
+    color: @color-black;
+  }
+
+  .promo__slogan {
+    font-size: 20px;
+    line-height: 20px;
+    color: @color-black;
   }
 }
 
 @media (min-width: @desktop-width) {
-  .promo {
+  .promo__wrapper {
     min-height: 634px;
     margin-bottom: 80px;
-    padding: 0 190px;
     background-image: url("../img/index-background-desktop@1x.jpg");
   }
 }

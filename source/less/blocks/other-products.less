@@ -3,7 +3,6 @@
   line-height: 24px;
   font-weight: 400;
   color: @color-black;
-  text-transform: uppercase;
 }
 
 .other-products__title-item {
@@ -17,4 +16,21 @@
 .other-products__item-cell {
   font-family: "Arial", sans-serif;
   line-height: 14px;
+}
+
+@media (min-width: @tablet-width) {
+  .other-products__title {
+    font-size: 36px;
+    line-height: 36px;
+  }
+
+  .other-products__title-item {
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .other-products__item-cell {
+    font-size: 16px;
+    line-height: 20px;
+  }
 }

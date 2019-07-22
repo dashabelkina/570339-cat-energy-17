@@ -1,4 +1,4 @@
-.page-header {
+.page-header__container {
   display: flex;
   flex-direction: column;
   text-transform: uppercase;
@@ -9,7 +9,6 @@
   display: flex;
   justify-content: space-between;
   min-height: 66px;
-  padding: 0 20px;
 }
 
 .page-header__logo {
@@ -26,10 +25,9 @@
     padding: 0;
   }
 
-  .page-header {
+  .page-header__container {
     flex-direction: row;
     justify-content: space-between;
-    padding: 0 30px;
   }
 
   .page-header__toggle {
@@ -40,9 +38,5 @@
 @media (min-width: @desktop-width) {
   .page-header__wrapper {
     min-height: 142px;
-  }
-
-  .page-header {
-    padding: 0 110px;
   }
 }
