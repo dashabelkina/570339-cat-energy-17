@@ -1,3 +1,38 @@
+.main-nav__wrapper {
+  min-width: 320px;
+  min-height: 200px;
+}
+
 .main-nav__list {
+  text-align: center;
+  margin: 0;
+  padding: 0;
   list-style: none;
+  font-size: 20px;
+  line-height: 20px;
+}
+
+@media (min-width: @tablet-width) {
+  .main-nav__wrapper {
+    min-height: 50px;
+  }
+
+  .main-nav__list {
+    display: flex;
+    justify-content: space-between;
+    min-width: 440px;
+    font-size: 18px;
+    line-height: 25px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .main-nav {
+    min-height: 142px;
+  }
+
+  .main-nav__list {
+    min-width: 480px;
+    font-size: 20px;
+  }
 }

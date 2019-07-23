@@ -1,7 +1,44 @@
+.benefits {
+  min-height: 450px;
+}
+
 .benefits__list {
   list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
 .benefits__text {
-  font-family: 'Arial', sans-serif;
+  font-family: "Arial", sans-serif;
+}
+
+@media (min-width: @tablet-width) {
+  .benefits {
+    min-height: 782px;
+  }
+
+  .benefits__text {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .benefits__list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .benefits__item {
+    width: 354px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .benefits {
+    min-height: 490px;
+  }
+
+  .benefits__item {
+    width: 245px;
+  }
 }

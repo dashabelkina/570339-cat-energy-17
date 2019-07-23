@@ -5,6 +5,7 @@
 
 .programm__form-item {
   border: none;
+  padding: 0;
 }
 
 .programm__form-legend {
@@ -27,6 +28,28 @@
 }
 
 .programm__text {
-  font-family: 'Arial', sans-serif;
+  font-family: "Arial", sans-serif;
   line-height: 16px;
+}
+
+@media (min-width: @tablet-width) {
+  .programm__desc {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .programm__label {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .programm__input,
+  .programm__textarea::placeholder {
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .programm__text{
+    font-size: 16px;
+  }
 }

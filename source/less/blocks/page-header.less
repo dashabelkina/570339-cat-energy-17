@@ -1,5 +1,42 @@
-.page-header {
+.page-header__container {
+  display: flex;
+  flex-direction: column;
   text-transform: uppercase;
   color: @color-black;
-  background-color: @color-white;
+}
+
+.page-header__wrapper {
+  display: flex;
+  justify-content: space-between;
+  min-height: 66px;
+}
+
+.page-header__logo {
+  width: 193px;
+}
+
+.page-header__toggle {
+  width: 50px;
+}
+
+@media (min-width: @tablet-width) {
+  .page-header__wrapper {
+    min-height: 115px;
+    padding: 0;
+  }
+
+  .page-header__container {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .page-header__toggle {
+    display: none;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-header__wrapper {
+    min-height: 142px;
+  }
 }

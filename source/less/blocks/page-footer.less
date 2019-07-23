@@ -1,3 +1,15 @@
 .page-footer {
   background-color: @color-smoke;
 }
+
+.page-footer__bottom {
+  min-height: 236px;
+  text-align: center;
+}
+
+@media (min-width: @tablet-width) {
+  .page-footer__bottom {
+    display: flex;
+    min-height: 150px;
+  }
+}

@@ -1,9 +1,10 @@
+
 .result {
   background-color: @color-smoke;
 }
 
 .result__text {
-  font-family: 'Arial', sans-serif;
+  font-family: "Arial", sans-serif;
 }
 
 .result__list {
@@ -19,7 +20,7 @@
 }
 
 .result__item-text {
-  font-family: 'Arial', sans-serif;
+  font-family: "Arial", sans-serif;
   font-size: 12px;
   line-height: 12px;
   text-align: center;
@@ -39,4 +40,20 @@
   text-transform: uppercase;
   background: transparent;
   border: none;
+}
+
+@media (min-width: @tablet-width) {
+  .result__stat {
+    background-color: @color-white;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .result__title {
+    background-color: @color-white;
+  }
+
+  .result__stat {
+    background-color: @color-smoke;
+  }
 }
