@@ -24,6 +24,7 @@
       font-size: 24px;
       line-height: 24px;
       color: @color-black;
+      margin-bottom: 34px;
     }
   }
 
@@ -71,7 +72,6 @@
   &[type="text"],
   &[type="email"],
   &[type="tel"] {
-    margin-left: 0 auto;
     margin-left: 13px;
     height: 40px;
     flex-grow: 1;
@@ -104,7 +104,6 @@
 
 .programm__form-item-radio {
   border: 1px solid #ededed;
-  padding: 0;
   padding: 25px 18px 3px;
   margin-bottom: 28px;
 }
@@ -114,7 +113,7 @@
 }
 
 .programm__input-radio {
-  &+label {
+  & + label {
     position: relative;
     display: block;
     padding-left: 45px;
@@ -133,7 +132,7 @@
     }
   }
 
-  &:checked+label::after {
+  &:checked + label::after {
     content: "";
     position: absolute;
     left: 8px;
@@ -145,7 +144,7 @@
   }
 
   &:hover {
-    &+label::before,
+    & + label::before,
     &:checked + label::before {
       border: 1px solid #bababa;
     }
@@ -181,9 +180,6 @@
 
 /* textarea-block */
 
-.programm__label-block {
-  margin-bottom: 34px;
-}
 .programm__textarea-block {
   display: block;
   margin-bottom: 26px;
@@ -208,8 +204,7 @@
 /* checkbox-block */
 
 .programm__form-item-checkbox {
-  margin-bottom:
-  23px
+  margin-bottom: 23px;
 }
 
 .programm__checkbox-block {
@@ -219,7 +214,7 @@
 }
 
 .programm__input-checkbox {
-  &+label {
+  & + label {
     position: relative;
     display: block;
     padding-left: 45px;
@@ -244,7 +239,7 @@
     top: 0px;
     width: 21px;
     height: 15;
-    background-image: url(/source/img/icon-tick.svg) no-repeat;
+    background-image: url("/source/img/icon-tick.svg") no-repeat;
     background-size: 21px 15px;
   }
 
@@ -285,10 +280,6 @@
     &__label {
       font-size: 20px;
       line-height: 30px;
-    }
-
-    &__text {
-      font-size: 16px;
     }
   }
 
