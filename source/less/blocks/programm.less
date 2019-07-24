@@ -12,6 +12,7 @@
   &__text {
     font-family: "Arial", sans-serif;
     line-height: 16px;
+    text-align: center;
   }
 
   &__label {
@@ -224,7 +225,7 @@
       content: "";
       position: absolute;
       top: -6px;
-      left: 0px;
+      left: 0;
       width: 29px;
       height: 29px;
       background-color: @color-white;
@@ -232,11 +233,11 @@
     }
   }
 
-  &:checked+label::after {
+  &:checked + label::after {
     content: "";
     position: absolute;
-    left: 0px;
-    top: 0px;
+    left: 0;
+    top: 0;
     width: 21px;
     height: 15;
     background-image: url("/source/img/icon-tick.svg") no-repeat;
@@ -244,7 +245,7 @@
   }
 
   &:hover {
-    &+label::before,
+    & + label::before,
     &:checked + label::before {
       border: 1px solid #bababa;
     }
@@ -259,10 +260,6 @@
 
 .programm__button {
   margin-bottom: 20px;
-}
-
-.programm__text {
-  text-align: center;
 }
 
 @media (min-width: @tablet-width) {
