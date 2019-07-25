@@ -1,42 +1,38 @@
-.programm {
-  &__title {
+.programm__title {
     margin-bottom: 25px;
   }
 
-  &__desc {
+.programm__desc {
     margin-bottom: 40px;
     color: @color-black;
     text-transform: uppercase;
-  }
+}
 
-  &__text {
+.programm__text {
     font-family: "Arial", sans-serif;
     line-height: 16px;
     text-align: center;
-  }
+}
 
-  &__label {
-    font-size: 16px;
-    color: @color-nero;
-    text-transform: uppercase;
-
-    &-block {
-      display: block;
-      font-size: 24px;
-      line-height: 24px;
-      color: @color-black;
-      margin-bottom: 34px;
-    }
+.programm__label {
+  font-size: 16px;
+  color: @color-nero;
+  text-transform: uppercase;
+  &-block {
+    display: block;
+  font-size: 24px;
+  line-height: 24px;
+  color: @color-black;
+  margin-bottom: 34px;
   }
+}
 
-  &__icon {
-    border: none;
-    background: transparent;
-    box-sizing: content-box;
-    position: relative;
-    bottom: px;
-    left: -27px;
-  }
+.programm__icon {
+  border: none;
+  background: transparent;
+  box-sizing: content-box;
+  position: relative;
+  left: -27px;
 }
 
 .programm__form {
@@ -70,26 +66,19 @@
 }
 
 .programm__input {
-  &[type="text"],
-  &[type="email"],
-  &[type="tel"] {
-    margin-left: 13px;
-    height: 40px;
-    flex-grow: 1;
-    border: 1px solid rgba(205, 205, 205, 0.5);
-
-    &:hover {
-      border: 1px solid rgb(205, 205, 205);
-    }
-
-    &:active,
-    &:focus {
-      border: 1px solid @color-charcoal;
-    }
-
-    &:invalid {
-      border: 1px solid #ff8282;
-    }
+  margin-left: 13px;
+  height: 40px;
+  flex-grow: 1;
+  border: 1px solid rgba(205, 205, 205, 0.5);
+  &:hover {
+    border: 1px solid rgb(205, 205, 205);
+  }
+  &:active,
+  &:focus {
+    border: 1px solid @color-charcoal;
+  }
+  &:invalid {
+    border: 1px solid #ff8282;
   }
 }
 
@@ -263,21 +252,19 @@
 }
 
 @media (min-width: @tablet-width) {
-  .programm {
-    &__title {
-      margin-bottom: 55px;
-    }
+  .programm__title {
+    margin-bottom: 55px;
+  }
 
-    &__desc {
-      margin-bottom: 65px;
-      font-size: 20px;
-      line-height: 30px;
-    }
+  .programm__desc {
+    margin-bottom: 65px;
+    font-size: 20px;
+    line-height: 30px;
+  }
 
-    &__label {
-      font-size: 20px;
-      line-height: 30px;
-    }
+  .programm__label {
+    font-size: 20px;
+    line-height: 30px;
   }
 
   .programm__input,
