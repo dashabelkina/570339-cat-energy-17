@@ -2,7 +2,7 @@
   display: block;
   width: 280px;
   padding: 11px 0;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 18px;
   font-weight: 400;
   color: @color-white;
@@ -11,7 +11,6 @@
   text-decoration: none;
   background-color: @color-apple;
   border: none;
-  margin: 0 auto;
 
   &:hover {
     background-color: @color-apple-dark;
@@ -34,5 +33,22 @@
   &:active {
     background-color: @color-smoke-dark;
     color: @color-charcoal-light;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .button__promo {
+    width: 245px;
+    display: block;
+    padding: 16px 0;
+    font-size: 20px;
+    line-height: 20px;
+    font-weight: 400;
+    color: @color-white;
+    text-transform: uppercase;
+    text-align: center;
+    text-decoration: none;
+    background-color: @color-apple;
+    border: none;
   }
 }
