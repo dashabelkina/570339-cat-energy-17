@@ -36,90 +36,85 @@
     <main class="page-main">
       <section class="programm">
         <h2 class="programm__title title-block container">Подбор программы</h2>
-        <p class="programm__desc container">Заполните анкету и мы подберем программу питания для вашего кота</p>
+        <p class="programm__desc container">Заполните анкету и мы подберем<br>
+          программу питания для вашего кота</p>
         <form class="programm__form" method="get" action="https://echo.htmlacademy.ru">
-          <fieldset class="programm__form-item container">
-            <legend class="programm__form-legend visually-hidden">Данные</legend>
-            <div class="programm__form-block programm__text-block">
-              <label class="programm__label" for="name-field">Имя:*</label>
-              <input class="programm__input" id="name-field" type="text" name="name" value="Барсик" placeholder="Имя" required autofocus>
-            </div>
-            <div class="programm__form-block programm__text-block">
-              <label class="programm__label" for="weight-field">Вес (кг):*</label>
-              <input class="programm__input" id="weight-field" type="text" name="weight" value="7" placeholder="Вес" required>
-            </div>
-            <div class="programm__form-block programm__text-block">
-              <label class="programm__label" for="age-field">Возраст (лет):</label>
-              <input class="programm__input" id="age-field" type="text" name="age" value="7" placeholder="Возраст">
-            </div>
-          </fieldset>
-          <fieldset class="programm__form-item container">
-            <legend class="programm__form-legend visually-hidden">Тип программы</legend>
-            <div class="programm__form-block programm__radio-block">
-              <input class="programm__input" class="visually-hidden form-input form-input-radio" type="radio" name="slim" value="slim" id="slim-field" checked>
-              <label class="programm__label" for="slim-field">Похудение</label>
-            </div>
-            <div class="programm__form-block programm__radio-block">
-              <input class="programm__input" class="visually-hidden form-input form-input-radio" type="radio" name="pro" value="pro" id="pro-field">
-              <label class="programm__label" for="pro-field">Набор массы</label>
-            </div>
-            <div class="programm__form-block programm__radio-block">
-              <input class="programm__input" class="visually-hidden form-input form-input-radio" type="radio" name="unknown" value="unknown" id="unknown-field">
-              <label class="programm__label" for="unknown-field">Не знаю (Нужен ваш совет)</label>
-            </div>
-          </fieldset>
+          <div class="programm__form-section container">
+            <fieldset class="programm__form-item programm__form-item-text container">
+              <legend class="programm__form-legend visually-hidden">Данные</legend>
+              <div class="programm__form-block programm__text-block">
+                <label class="programm__label" for="name-field">Имя:*</label>
+                <input class="programm__input" id="name-field" type="text" name="name" value="Барсик" placeholder="Имя" required autofocus>
+              </div>
+              <div class="programm__form-block programm__text-block">
+                <label class="programm__label" for="weight-field">Вес (кг):*</label>
+                <input class="programm__input" id="weight-field" type="text" name="weight" value="7" placeholder="Вес" required>
+              </div>
+              <div class="programm__form-block programm__text-block">
+                <label class="programm__label" for="age-field">Возраст (лет):</label>
+                <input class="programm__input" id="age-field" type="text" name="age" value="7" placeholder="Возраст">
+              </div>
+            </fieldset>
+            <fieldset class="programm__form-item programm__form-item-radio container">
+              <legend class="programm__form-legend visually-hidden">Тип программы</legend>
+              <div class="programm__form-block programm__radio-block">
+                <input class="programm__input visually-hidden programm__input-radio" type="radio" name="slim" value="slim" id="slim-field" checked>
+                <label class="programm__label" for="slim-field">Похудение</label>
+              </div>
+              <div class="programm__form-block programm__radio-block">
+                <input class="programm__input visually-hidden programm__input-radio" type="radio" name="pro" value="pro" id="pro-field">
+                <label class="programm__label" for="pro-field">Набор массы</label>
+              </div>
+              <div class="programm__form-block programm__radio-block">
+                <input class="programm__input visually-hidden programm__input-radio" type="radio" name="unknown" value="unknown" id="unknown-field">
+                <label class="programm__label" for="unknown-field">Не знаю (Нужен ваш совет)</label>
+              </div>
+            </fieldset>
+          </div>
           <fieldset class="programm__form-item">
             <div class="title-line">
               <legend class="programm__form-legend container"><span>Контактные данные (владельца кота)</span></legend>
             </div>
-            <div class="container">
+            <div class="programm__email-block container">
               <div class="programm__form-block programm__text-block">
                 <label class="programm__label" for="email-field">E-mail:*</label>
                 <input class="programm__input" id="email-field" type="email" name="email" value="kuklachev@gmail.com" placeholder="E-mail" required>
-                <button class="programm__icon" type="button" name="email-icon" aria-label="Email">
-                  <svg xmlns="#" width="17" height="13" viewBox="#"><path></svg>
-                </button>
               </div>
               <div class="programm__form-block programm__text-block">
-                <label class="programm__label" for="tel-field">Вес (кг):*</label>
+                <label class="programm__label" for="tel-field">Телефон:*</label>
                 <input class="programm__input" id="tel-field" type="tel" name="tel" value="8 (960) 900-60-90" placeholder="Телефон" required>
-                <button class="programm__icon" type="button" name="tel-icon" aria-label="Phone">
-                  <svg xmlns="#" width="20" height="20" viewBox="#"><path></svg>
-                </button>
               </div>
             </div>
           </fieldset>
           <fieldset class="programm__form-item">
             <div class="programm__form-block programm__textarea-block">
               <div class="title-line">
-                <div class="container">
-                  <label class="programm__form-legend" for="feedback-field"><span>Комментарий</span></label>
-                </div>
+                <label class="programm__label-block container" for="feedback-field"><span>Комментарий</span></label>
               </div>
               <div class="container">
                 <textarea class="programm__textarea" id="feedback-field" name="feedback" placeholder="Расскажите обо всех повадках кота"></textarea>
               </div>
             </div>
           </fieldset>
-          <fieldset class="programm__form-item">
+          <fieldset class="programm__form-item programm__form-item-checkbox">
             <div class="title-line">
               <legend class="programm__form-legend container"><span>Дополнительно</span></legend>
             </div>
-            <div class="container">
+            <div class="programm__checkbox-block-wrap container">
               <div class="programm__form-block programm__checkbox-block">
-                <input class="programm__input" class="visually-hidden form-input form-input-checkbox" type="checkbox" name="sweetener" value="sweetener" id="sweetener-field" checked>
+                <input class="programm__input visually-hidden programm__input-checkbox" form-input form-input-checkbox" type="checkbox" name="sweetener" value="sweetener" id="sweetener-field" checked>
                 <label class="programm__label" for="sweetener-field">Сахарозаменитель</label>
               </div>
               <div class="programm__form-block programm__checkbox-block">
-                <input class="programm__input" class="visually-hidden form-input form-input-checkbox" type="checkbox" name="water" value="water" id="water-field">
+                <input class="programm__input visually-hidden programm__input-checkbox" form-input form-input-checkbox" type="checkbox" name="water" value="water" id="water-field">
                 <label class="programm__label" for="water-field">Питьевая вода</label>
               </div>
               <div class="programm__form-block programm__checkbox-block">
-                <input class="programm__input" class="visually-hidden form-input form-input-checkbox" type="checkbox" name="milk" value="milk" id="milk-field">
+                <input class="programm__input visually-hidden programm__input-checkbox" form-input form-input-checkbox" type="checkbox" name="milk" value="milk" id="milk-field">
                 <label class="programm__label" for="milk-field">Молоко</label>
               </div>
               <div class="programm__form-block programm__checkbox-block">
-                <input class="programm__input" class="visually-hidden form-input form-input-checkbox" type="checkbox" name="vitamins" value="vitamins" id="vitamins-field">
+                <input class="programm__input visually-hidden programm__input-checkbox" form-input form-input-checkbox" type="checkbox" name="vitamins" value="vitamins" id="vitamins-field">
                 <label class="programm__label" for="vitamins-field">Витамины</label>
               </div>
             </div>
