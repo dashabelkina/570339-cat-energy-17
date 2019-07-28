@@ -1,41 +1,197 @@
 .benefits {
-  min-height: 450px;
+  display: flex;
+  flex-direction: column;
+}
+
+.benefits__title {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.benefits__item {
+  width: 200px;
+  margin-bottom: 26px;
 }
 
 .benefits__list {
   list-style-type: none;
   margin: 0;
-  padding: 0;
+  padding-left: 80px;
 }
 
 .benefits__text {
+  position: relative;
   font-family: "Arial", sans-serif;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -80px;
+    width: 60px;
+    height: 60px;
+    background: @color-apple;
+  }
+
+  &--leaf {
+    &::after {
+      content: "";
+      position: absolute;
+      top: 2px;
+      left: -75px;
+      width: 50px;
+      height: 50px;
+      background-image: url("../img/advantage-leaf@1x.png");
+      background-repeat: no-repeat;
+      background-position: 0 0;
+    }
+  }
+
+  &--powder {
+    &::after {
+      content: "";
+      position: absolute;
+      top: 2px;
+      left: -75px;
+      width: 50px;
+      height: 50px;
+      background-image: url("../img/advantage-powder@1x.png");
+      background-repeat: no-repeat;
+      background-position: 0 0;
+    }
+  }
+
+  &--cutlery {
+    &::after {
+      content: "";
+      position: absolute;
+      top: 2px;
+      left: -75px;
+      width: 50px;
+      height: 50px;
+      background-image: url("../img/advantage-dining@1x.png");
+      background-repeat: no-repeat;
+      background-position: 0 0;
+    }
+  }
+
+  &--clock {
+    &::after {
+      content: "";
+      position: absolute;
+      top: 2px;
+      left: -75px;
+      width: 50px;
+      height: 50px;
+      background-image: url("../img/advantage-clock@1x.png");
+      background-repeat: no-repeat;
+      background-position: 0 0;
+    }
+  }
 }
 
 @media (min-width: @tablet-width) {
-  .benefits {
-    min-height: 782px;
+  .benefits__title {
+    margin-top: 30px;
+    margin-bottom: 30px;
   }
 
   .benefits__text {
     font-size: 16px;
     line-height: 24px;
+    width: 245px;
+
+    &::before {
+      top: -112px;
+      left: 0;
+      width: 80px;
+      height: 80px;
+    }
+
+    &--leaf {
+      &::after {
+      top: -97px;
+      left: 15px;
+      }
+    }
+
+    &--powder {
+      &::after {
+      top: -97px;
+      left: 15px;
+      }
+    }
+
+    &--cutlery {
+      &::after {
+      top: -97px;
+      left: 15px;
+      }
+    }
+
+    &--clock {
+      &::after {
+      top: -97px;
+      left: 15px;
+      }
+    }
   }
 
   .benefits__list {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    padding-left: 0;
   }
 
   .benefits__item {
-    width: 354px;
+    position: relative;
+    width: 325px;
+    padding-top: 137px;
+    margin-bottom: 76px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 2px;
+      left: 120px;
+      font-size: 282px;
+      line-height: 282px;
+      color: @color-smoke;
+    }
+
+    &--leaf {
+      &::before {
+      content: "1";
+      }
+    }
+
+    &--powder {
+      &::before {
+        content: "2";
+        left: 114px;
+      }
+    }
+
+    &--cutlery {
+      &::before {
+        content: "3";
+        left: 114px;
+      }
+    }
+
+    &--clock {
+      &::before {
+        content: "4";
+        left: 114px;
+      }
+    }
   }
 }
 
 @media (min-width: @desktop-width) {
-  .benefits {
-    min-height: 490px;
+  .benefits__title {
+    margin-top: 41px;
   }
 
   .benefits__item {
