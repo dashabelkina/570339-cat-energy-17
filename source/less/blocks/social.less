@@ -1,14 +1,28 @@
 .social__list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   list-style: none;
   display: flex;
-  margin: 0;
-  padding: 0;
+  width: 280px;
+  margin: 0 auto;
+  padding: 20px 0px 20px 0px;
+  border-top: 1px solid #d9d9d9;
+  border-bottom: 1px solid #d9d9d9;
+}
+
+.social__item {
+  width: 55px;
 }
 
 @media (min-width: @tablet-width) {
   .social {
     display: flex;
-    justify-content: space-between;
     flex-grow: 1;
+  }
+
+  .social__list {
+    border: none;
+    padding-top: 0;
   }
 }
