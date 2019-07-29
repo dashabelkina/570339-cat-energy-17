@@ -25,6 +25,8 @@
 .button__more {
   background-color: @color-smoke;
   color: @color-charcoal;
+  font-size: 16px;
+  line-height: 20px;
 
   &:hover {
     background-color: @color-smoke-dark;
@@ -34,6 +36,10 @@
     background-color: @color-smoke-dark;
     color: @color-charcoal-light;
   }
+}
+
+.button__catalog {
+  font-size: 16px;
 }
 
 @media (min-width: @tablet-width) {
@@ -50,5 +56,17 @@
     text-decoration: none;
     background-color: @color-apple;
     border: none;
+  }
+
+  .button__catalog,
+  .button__more {
+    width: 249px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .button__catalog,
+  .button__more {
+    width: 169px;
   }
 }

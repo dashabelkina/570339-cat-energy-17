@@ -1,7 +1,26 @@
 .gift {
+  position: relative;
   background-image: url("../img/gift-photo-mobile@1x.jpg");
   background-repeat: no-repeat;
+  background-size: 280px auto;
   background-color: @color-apple;
+  display: flex;
+  justify-content: center;
+  padding-top: 172px;
+  padding-bottom: 26px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 66px;
+    left: 113px;
+    width: 55px;
+    height: 60px;
+    background-image: url("../img/icon-gift.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    fill: #ffffff;
+  }
 }
 
 .gift__text {
@@ -9,4 +28,44 @@
   font-size: 16px;
   line-height: 20px;
   color: @color-white;
+  text-align: center;
+  width: 165px;
+}
+
+@media (min-width: @tablet-width) {
+  .gift {
+    background-image: url("../img/gift-photo-tablet@1x.jpg");
+    background-size: 708px auto;
+    padding: 57px 120px 51px 0;
+    justify-content: flex-end;
+    align-items: center;
+
+    &::before {
+      top: 66px;
+      left: 90px;
+    }
+  }
+
+  .gift__text {
+    text-align: left;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .gift {
+    background-image: url("../img/gift-photo-desktop@1x.jpg");
+    background-size: 245px auto;
+    padding: 0 39px;
+    justify-content: flex-end;
+
+    &::before {
+      top: 66px;
+      left: 95px;
+    }
+  }
+
+  .gift__text {
+    text-align: center;
+    margin-top: 163px;
+  }
 }

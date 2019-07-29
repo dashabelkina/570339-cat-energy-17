@@ -1,11 +1,42 @@
+.catalog {
+  margin: 0 auto;
+  width: 320px;
+}
+
+.catalog__title {
+  margin-top: 15px;
+  margin-bottom: 28px;
+  padding-left: 20px;
+}
+
+.catalog__wrapper {
+  border: 1px solid #ededed;
+  padding: 0 20px;
+  margin-bottom: 29px;
+}
+
 .catalog__item {
-  min-height: 210px;
+  position: relative;
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
+  padding-bottom: 25px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 208px;
+    left: -21px;
+    width: 320px;
+    height: 1px;
+    background: #ededed;
+  }
 }
 
 .catalog__item-title {
+  width: 80px;
+  padding-top: 5px;
+  margin-bottom: 12px;
   font-size: 16px;
   font-weight: 400;
   line-height: 20px;
@@ -15,6 +46,7 @@
 
 .catalog__table {
   border-collapse: collapse;
+  width: 138px;
 }
 
 .catalog__cell,
@@ -24,19 +56,86 @@
   line-height: 16px;
 }
 
+.catalog__cell {
+  width: 50%;
+  padding-bottom: 0;
+}
+
+.catalog__cell--right {
+  text-align: right;
+}
+
+.catalog__more {
+  position: relative;
+  padding-top: 58px;
+  padding-bottom: 24px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 25px;
+    left: 124px;
+    width: 30px;
+    height: 30px;
+    background-image: url("../img/icon-plus-mobile.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    fill: #222222;
+    opacity: 0.2;
+  }
+}
+
+.catalog__more-title {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 7px;
+}
+
+.catalog__text {
+  margin-top: 0;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
 @media (min-width: @tablet-width) {
+  .catalog {
+    width: @tablet-width;
+  }
+
   .catalog__wrapper {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
+    border: none;
+    padding: 0 30px;
+    margin-bottom: 10px;
+  }
+
+  .catalog__item-desc {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   .catalog__title {
     font-size: 60px;
     line-height: 60px;
+    margin-top: 51px;
+    margin-bottom: 82px;
+    padding-left: 29px;
   }
 
   .catalog__item-title {
     font-size: 20px;
+    text-align: center;
+    width: 145px;
+    padding-top: 82px;
+    margin-bottom: 18px;
+  }
+
+  .catalog__table {
+    width: 247px;
+    margin-bottom: 31px;
   }
 
   .catalog__cell,
@@ -44,28 +143,103 @@
     font-size: 16px;
   }
 
+  .catalog__cell {
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+
+  .catalog__row {
+    border-bottom: 1px solid #ededed;
+  }
+
   .catalog__item {
-    min-width: 324px;
-    min-height: 513px;
+    width: 324px;
     flex-direction: column;
+    align-items: center;
+    padding-bottom: 39px;
+    margin-bottom: 58px;
+    background: linear-gradient(to bottom, @color-white 82px, @color-smoke 82px);
+
+    &::before {
+      display: none;
+    }
   }
 
   .catalog__more {
     width: 324px;
+    padding: 0;
+    padding-top: 82px;
+
+    &::before {
+      top: 137px;
+      left: 133px;
+      width: 60px;
+      height: 60px;
+      background-image: url("../img/icon-plus.svg");
+      fill: #222222;
+      opacity: 0.2;
+    }
+  }
+
+  .catalog__more-wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #ededed;
+    padding-top: 164px;
+    padding-bottom: 38px;
+  }
+
+  .catalog__text {
+    line-height: 20px;
+    width: 175px;
+    margin-top: 25px;
+    margin-bottom: 81px;
+  }
+
+  .catalog__more-title {
+    margin: 0;
+    padding: 0;
   }
 }
 
 @media (min-width: @desktop-width) {
+  .catalog {
+    width: @desktop-width;
+  }
+
   .catalog__wrapper {
-    width: 1220px;
+    padding: 0 40px;
+    margin-bottom: 18px;
+  }
+
+  .catalog__title {
+    margin-top: 67px;
+    margin-bottom: 82px;
+    padding-left: 38px;
   }
 
   .catalog__item {
-    min-width: 245px;
-    min-height: 513px;
+    width: 245px;
+    background: linear-gradient(to bottom, @color-white 80px, @color-smoke 80px);
+  }
+
+  .catalog__table {
+    width: 168px;
+    margin-bottom: 31px;
+  }
+
+  .catalog__row {
+    border-bottom: 1px solid #cdcdcd;
   }
 
   .catalog__more {
     width: 245px;
+
+    &::before {
+      top: 136px;
+      left: 92px;
+    }
   }
 }
