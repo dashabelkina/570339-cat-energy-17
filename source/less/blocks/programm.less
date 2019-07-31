@@ -152,32 +152,32 @@
 }
 
 .programm__input-email {
-    position: relative;
+  position: relative;
 
-    &::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 50px;
-      height: 50px;
-      background: url("../img/icon-mail.svg");
-      background-repeat: no-repeat;
-    }
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50px;
+    height: 50px;
+    background: url("../img/icon-mail.svg");
+    background-repeat: no-repeat;
   }
+}
 
-  .programm__input-tel {
-    position: relative;
+.programm__input-tel {
+  position: relative;
 
-    &::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 20px;
-      height: 20px;
-      background: url("../img/icon-phone.svg");
-      background-repeat: no-repeat;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    background: url("../img/icon-phone.svg");
+    background-repeat: no-repeat;
   }
 }
 
@@ -265,9 +265,9 @@
 .programm__input-radio:focus + label::before,
 .programm__input-checkbox:focus + label::before,
 .programm__input-checkbox:focus:checked + label::before {
-    opacity: 1;
-    outline: 3px solid rgb(103, 184, 250);
-    outline-offset: 5px;
+  opacity: 1;
+  outline: 3px solid rgb(103, 184, 250);
+  outline-offset: 5px;
 }
 
 /* programm__footer */
@@ -312,10 +312,10 @@
 
   .programm__form-legend,
   .programm__label-block {
-      font-size: 36px;
-      line-height: 36px;
-      padding: 0;
-      margin-bottom: 75px;
+    font-size: 36px;
+    line-height: 36px;
+    padding: 0;
+    margin-bottom: 75px;
   }
 
   .programm__form-item-text {
@@ -330,20 +330,29 @@
   .programm__checkbox-block-wrap {
     display: flex;
     flex-wrap: wrap;
+    padding-left: 109px;
   }
 
   .programm__checkbox-block {
     min-width: 285px;
+    padding-bottom: 36px;
+    margin-right: 60px;
   }
 
   .programm__footer {
     display: flex;
     justify-content: left;
+    padding-left: 110px;
+    margin-bottom: 52px;
   }
 
   .programm__button {
     margin-left: 0;
     margin-right: 0;
+    width: 283px;
+    padding: 16px 0;
+    font-size: 20px;
+    line-height: 20px;
   }
 
   .programm__form-item-radio {
@@ -416,27 +425,6 @@
     margin-bottom: 24px;
   }
 
-  .programm__checkbox-block-wrap {
-    padding-left: 109px;
-  }
-
-  .programm__checkbox-block {
-    padding-bottom: 36px;
-    margin-right: 60px;
-  }
-
-  .programm__button {
-    width: 283px;
-    padding: 16px 0;
-    font-size: 20px;
-    line-height: 20px;
-  }
-
-  .programm__footer {
-    padding-left: 110px;
-    margin-bottom: 52px;
-  }
-
   .programm__text {
     font-size: 16px;
     padding-left: 62px;
@@ -445,6 +433,8 @@
 
 @media (min-width: @desktop-width) {
   .programm__form-section {
+    width: 1220px;
+    margin-bottom: 68px;
     display: flex;
     justify-content: space-between;
   }
@@ -455,11 +445,6 @@
 
   .programm__desc {
     padding-left: 40px;
-  }
-
-  .programm__form-section  {
-    width: 1220px;
-    margin-bottom: 68px;
   }
 
   .programm__text-block:last-child {
