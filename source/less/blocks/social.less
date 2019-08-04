@@ -13,6 +13,7 @@
 .social__item {
   width: 55px;
 }
+
 .social__link {
   fill: #666666;
 
@@ -40,7 +41,7 @@
   .social__link {
     &--vkontakte {
       width: 30px;
-      height: 16px;;
+      height: 16px;
     }
 
     &--instagram {
@@ -51,7 +52,16 @@
 
     &--facebook {
       width: 14px;
-      height: 28px;;
+      height: 28px;
+    }
+
+    &:hover {
+      fill: @color-apple;
+    }
+
+    &:active {
+      fill: @color-apple;
+      opacity: 0.3;
     }
   }
 }
