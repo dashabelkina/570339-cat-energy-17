@@ -14,8 +14,33 @@
   }
 }
 
+.copyright__icon {
+  width: 27px;
+  height: 34px;
+  fill: #666666;
+}
+
 @media (min-width: @tablet-width) {
+  .copyright__link {
+    position: relative;
+  }
+
   .copyright__text:active {
     opacity: 0.3;
+  }
+
+  .copyright__icon {
+    position: absolute;
+    top: -6px;
+    left: 136px;
+
+    &:hover {
+      fill: @color-apple;
+    }
+
+    &:active {
+      fill: @color-apple;
+      opacity: 0.3;
+    }
   }
 }
