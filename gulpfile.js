@@ -15,6 +15,7 @@ var svgstore = require("gulp-svgstore");
 var posthtml = require("gulp-posthtml");
 var include = require("posthtml-include");
 var del = require("del");
+var uglify = require("gulp-uglify");
 
 gulp.task("css", function () {
   return gulp.src("source/less/style.less")
@@ -28,6 +29,16 @@ gulp.task("css", function () {
     .pipe(rename("style.min.css"))
     .pipe(sourcemap.write("."))
     .pipe(gulp.dest("build/css"))
+    .pipe(server.stream());
+});
+
+/* Минификация JavaScript */
+
+gulp.task("minify", function() {
+  return gulp.src("source/js/nav.js")
+    .pipe(uglify())
+    .pipe(rename("nav.min.js"))
+    .pipe(gulp.dest("build/js"))
     .pipe(server.stream());
 });
 
@@ -91,7 +102,7 @@ gulp.task("refresh", function (done) {
   done();
 });
 
-gulp.task("build", gulp.series("css", "sprite", "html"));
+gulp.task("build", gulp.series("css", "sprite", "html", "minify"));
 gulp.task("start", gulp.series("build", "server"));
 
 /* Копирование файлов */
@@ -119,5 +130,6 @@ gulp.task("build", gulp.series(
   "copy",
   "css",
   "sprite",
-  "html"
+  "html",
+  "minify"
 ));
