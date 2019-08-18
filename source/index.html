@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>Cat Energy</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="preload" href="fonts/oswaldregular.woff2" as="font">
+    <link rel="preload" href="/fonts/oswaldregular.woff2" as="font">
     <link rel="preload" href="fonts/oswaldmedium.woff2" as="font">
     <link href="css/style.min.css" rel="stylesheet">
     <script src="js/picturefill.min.js"></script>
@@ -15,16 +15,16 @@
     </div>
     <header class="page-header page-header__index">
       <div class="page-header__container">
-        <div class="page-header__wrapper">
+        <div class="page-header__wrapper container">
           <a class="page-header__logo" href="#">
             <picture>
               <source media="(min-width: 1300px)" srcset="img/logo-desktop.svg">
               <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
-              <img class="page-header__logo-image" src="img/logo-mobile.svg" width="191" height="38" alt="Cat Energy">
+              <img class="page-header__logo-image" src="img/logo-mobile.svg" width="191" height="38" alt="Логотип Cat Energy">
             </picture>
           </a>
+          <button class="page-header__toggle" type="button"><span class="visually-hidden">Меню</span></button>
         </div>
-        <button class="page-header__toggle" type="button"><span class="visually-hidden">Меню</span></button>
         <nav class="main-nav main-nav__close main">
           <div class="main-nav__wrapper">
             <ul class="main-nav__list site-list">
@@ -54,9 +54,9 @@
                 <source type="image/webp" media="(min-width: 1300px)" srcset="img/index-can-desktop@1x.webp 1x, img/index-can-desktop@2x.webp 2x">
                 <source type="image/webp" media="(min-width: 768px)" srcset="img/index-can-tablet@1x.webp 1x, img/index-can-tablet@2x.webp 2x">
                 <source type="image/webp" srcset="img/index-can-mobile@1x.webp 1x, img/index-can-mobile@2x.webp 2x">
-                <source media="(min-width: 1300px)" srcset="img/index-can-desktop@1x.png, img/index-can-desktop@2x.png">
-                <source media="(min-width: 768px)" srcset="img/index-can-tablet@1x.jpg, img/index-can-tablet@2x.jpg">
-                <img class="promo__image" src="img/index-can-mobile@1x.png" srcset="img/index-can-mobile@2x.png" width="280" height="270" alt="Cat Energy курица">
+                <source media="(min-width: 1300px)" srcset="img/index-can-desktop@1x.png 1x, img/index-can-desktop@2x.png 2x">
+                <source media="(min-width: 768px)" srcset="img/index-can-tablet@1x.jpg 1x, img/index-can-tablet@2x.jpg 2x">
+                <img class="promo__image" src="img/index-can-mobile@1x.png" srcset="img/index-can-mobile@2x.png" width="280" height="270" alt="Cat Energy со вкусом курицы">
               </picture>
             </div>
             <button class="button__promo button" type="button">Подобрать программу</button>
@@ -74,7 +74,7 @@
             <h2 class="category__title">Набор массы</h2>
             <p class="category__text">Заработать авторитет среди дворовых котов и даже собак?
               Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!</p>
-            <a class="category__link" href="#">Каталог Pro</a>
+            <a class="category__link category__link--pro" href="#">Каталог Pro</a>
           </div>
         </div>
       </section>
@@ -96,10 +96,10 @@
         </ul>
       </section>
       <section class="result">
-        <h2 class="result__title title-block"><div class="container">Живой пример</div></h2>
+        <h2 class="result__title title-block container">Живой пример</h2>
         <div class="result__stat-container">
           <div class="result__stat-wrapper">
-            <div class="result__stat-wrap">
+            <div class="result__stat-wrap container">
               <p class="result__text">
                 Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.
               </p>
@@ -129,7 +129,7 @@
                   <source type="image/webp" srcset="img/before-mobile@1x.webp 1x, img/before-mobile@2x.webp 2x">
                   <source media="(min-width: 1300px)" srcset="img/before-desktop@1x.png 1x, img/before-desktop@1x.png 2x">
                   <source media="(min-width: 768px)" srcset="img/before-tablet@1x.png 1x, img/before-tablet@2x.png 2x">
-                  <img class="slider__image slider__image-before" src="img/before-mobile@1x.png" srcset="img/before-mobile@1x.png 2x" width="320" height="240" alt="Cat before">
+                  <img class="slider__image slider__image-before" src="img/before-mobile@1x.png" srcset="img/before-mobile@1x.png 2x" width="320" height="240" alt="Кот до приема Cat Energy">
                 </picture>
                 <picture>
                   <source type="image/webp" media="(min-width: 1300px)" srcset="img/after-desktop@1x.webp 1x, img/after-desktop@2x.webp 2x">
@@ -137,17 +137,17 @@
                   <source type="image/webp" srcset="img/after-mobile@1x.webp 1x, img/after-mobile@2x.webp 2x">
                   <source media="(min-width: 1300px)" srcset="img/after-desktop@1x.png 1x, img/after-desktop@1x.png 2x">
                   <source media="(min-width: 768px)" srcset="img/after-tablet@1x.png 1x, img/after-tablet@2x.png 2x">
-                    <img class="slider__image slider__image-after" src="img/after-mobile@1x.png" srcset="img/after-mobile@1x.png 2x" width="320" height="240" alt="Cat after">
+                  <img class="slider__image slider__image-after" src="img/after-mobile@1x.png" srcset="img/after-mobile@1x.png 2x" width="320" height="240" alt="Кот после приема Cat Energy">
                 </picture>
               </div>
               <div class="slider__scale">
-                <label class="slider__label slider__label-before" for="before">Было</label>
+                <label class="slider__label slider__label-before" for="before" tabindex="0">Было</label>
                 <div class="slider__range-filter">
-                  <div class="slider__range-controls">
+                  <div class="slider__range-controls" tabindex="0">
                     <div class="slider__range-toggle"></div>
                   </div>
                 </div>
-                <label class="slider__label slider__clabel-after" for="after">Стало</label>
+                <label class="slider__label slider__clabel-after" for="after" tabindex="0">Стало</label>
               </div>
             </div>
           </div>
@@ -160,14 +160,14 @@
           <b class="contacts__title">приглашаем к&nbsp;сотрудничеству дилеров!</b>
           <p class="contacts__text"> ул. Большая Конюшенная, д. 19/8 <span>Санкт-Петербург</span></p>
         </div>
-        <div class="map">
-          <iframe class="map__iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533277!2d30.320858716096975!3d59.93871648187614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1563767259784!5m2!1sru!2sru" width="600" height="362" frameborder="0" style="border:0" allowfullscreen=""></iframe>
+        <div class="map" id="map">
+          <iframe class="map__iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533277!2d30.320858716096975!3d59.93871648187614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1563767259784!5m2!1sru!2sru" width="600" height="362" style="border:0" allowfullscreen=""></iframe>
           <img class="map-image visually-hidden" src="img/bg-map-mobile@1x.png" width="320" height="400" alt="Карта">
         </div>
       </div>
-      <div class="page-footer__bottom container">
+      <div class="page-footer__bottom">
         <a class="page-footer__logo" href="#">
-          <img class="page-footer__logo-text" src="img/logo-footer.svg" width="128" height="24" alt="Cat Energy">
+          <img class="page-footer__logo-text" src="img/logo-footer.svg" width="128" height="24" alt="Логотип Cat Energy">
         </a>
         <div class="page-footer__social social">
           <ul class="social__list">
@@ -187,12 +187,12 @@
               </a>
             </li>
           </ul>
-          <div class="page-footer__copyright copyright">
-            <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
-              <span class="copyright__text">HTML Academy</span>
-              <svg class="copyright__icon" idth="27" height="34"><use xlink:href="#icon-academy"></use></svg>
-            </a>
-          </div>
+        </div>
+        <div class="page-footer__copyright copyright container">
+          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+            <span class="copyright__text">HTML Academy</span>
+            <svg class="copyright__icon" width="27" height="34"><use xlink:href="#icon-academy"></use></svg>
+          </a>
         </div>
       </div>
     </footer>
