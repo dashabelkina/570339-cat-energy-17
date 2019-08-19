@@ -17,20 +17,20 @@
 
 .slider__scale {
   display: flex;
+  align-items: center;
   width: 198px;
   margin: 0 auto;
-  align-items: center;
-  padding-left: 5px;
   padding-bottom: 35px;
+  padding-left: 5px;
 }
 
 .slider__range-filter {
   width: 84px;
   height: 12px;
+  margin: 0 auto;
   background-color: @color-white;
   border: 1px solid #cdcdcd;
   border-radius: 7px;
-  margin: 0 auto;
 }
 
 .slider__range-controls {
@@ -44,9 +44,9 @@
     height: 6px;
     top: 0;
     left: 0;
+    margin: 3px 5px 3px;
     background-color: @color-apple;
     border-radius: 5px;
-    margin: 3px 5px 3px;
   }
 }
 
@@ -83,38 +83,38 @@
 @media (min-width: @tablet-width) {
   .slider {
     padding-top: 26px;
-    background: linear-gradient(to bottom, @color-white 195px, @color-smoke 195px),
+    background: linear-gradient(to bottom, @color-white 196px, @color-smoke 196px),
       linear-gradient(to right, @color-smoke 50%, #eaeaea 50%);
   }
 
   .slider__wrap {
     position: relative;
-    margin-bottom: 19px;
     min-height: 517px;
+    margin-bottom: 17px;
   }
 
   .slider__image {
     position: absolute;
-    top: 0;
-    left: 295px;
+    top: 1px;
+    left: 34px;
     width: 690px;
     height: 517px;
     padding-left: 12px;
   }
 
   .slider__image-before {
-    clip: rect(auto, 351px, auto, auto);
+    clip: rect(auto, 350px, auto, auto);
   }
 
   .slider__image-after {
     display: block;
-    clip: rect(auto, auto, auto, 351px);
+    clip: rect(auto, auto, auto, 350px);
   }
 
   .slider__scale {
-    width: 568px;
-    padding-bottom: 69px;
-    padding-left: 0;
+    width: 570px;
+    padding-bottom: 68px;
+    padding-left: 12px;
   }
 
   .slider__range-filter {
@@ -131,18 +131,18 @@
     top: -15px;
     left: 200px;
     background-color: @color-white;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.15);
     border: 1px solid #cecece;
     border-radius: 50%;
-    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.15);
     cursor: pointer;
 
     &::before {
+      top: 9px;
+      left: 7px;
       width: 8px;
       height: 8px;
       background-color: @color-apple;
       border-radius: 50%;
-      top: 9px;
-      left: 7px;
     }
 
     &:hover {
@@ -150,15 +150,20 @@
     }
 
     &:active {
-      border: 1px solid @color-apple;
       box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.25), inset 0 0 0 1px @color-apple;
+      border: 1px solid @color-apple;
+    }
+
+    &:focus {
+      outline: 3px solid rgb(253, 137, 59);
     }
   }
 
   .slider__label {
+    margin-top: 3px;
+    padding-bottom: 6px;
     font-size: 20px;
     border-bottom: 1px dotted rgba(0, 0, 0, 0.23);
-    padding-bottom: 5px;
 
     &:hover {
       border-bottom: 1px solid rgba(0, 0, 0, 0.4);
@@ -166,6 +171,10 @@
 
     &:active {
       border-bottom: none;
+    }
+
+    &:focus {
+      outline: 3px solid rgb(253, 137, 59);
     }
   }
 
@@ -197,11 +206,12 @@
 
 @media (min-width: @desktop-width) {
   .slider {
+    position: relative;
+    left: -77px;
+    width: 777px;
+    margin: 0 auto;
     padding-top: 20px;
     background: none;
-    margin: 0 auto;
-    width: 1220px;
-    position: relative;
   }
 
   .slider__wrap {
@@ -209,23 +219,27 @@
   }
 
   .slider__image {
+    top: -212px;
+    left: 122px;
     width: 690px;
     height: 517px;
-    top: -210px;
-    left: 123px;
   }
 
   .slider__image-before {
-    clip: rect(auto, 376px, auto, auto);
+    clip: rect(auto, 377px, auto, auto);
   }
 
   .slider__image-after {
-    clip: rect(auto, auto, auto, 376px);
+    clip: rect(auto, auto, auto, 377px);
   }
 
   .slider__scale {
     position: absolute;
-    bottom: -50px;
-    left: 215px;
+    left: 202px;
+    bottom: -48px;
+  }
+
+  .slider__label {
+    padding-bottom: 5px;
   }
 }

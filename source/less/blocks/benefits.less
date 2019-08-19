@@ -14,9 +14,9 @@
 }
 
 .benefits__list {
-  list-style-type: none;
   margin: 0;
   padding-left: 80px;
+  list-style: none;
 }
 
 .benefits__text {
@@ -42,8 +42,8 @@
       width: 50px;
       height: 50px;
       background-image: url("../img/advantage-leaf@1x.png");
-      background-repeat: no-repeat;
       background-position: 0 0;
+      background-repeat: no-repeat;
 
       @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
         background-image: url("../img/advantage-leaf@2x.png");
@@ -61,8 +61,8 @@
       width: 50px;
       height: 50px;
       background-image: url("../img/advantage-powder@1x.png");
-      background-repeat: no-repeat;
       background-position: 0 0;
+      background-repeat: no-repeat;
 
       @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
         background-image: url("../img/advantage-powder@2x.png");
@@ -80,8 +80,8 @@
       width: 50px;
       height: 50px;
       background-image: url("../img/advantage-dining@1x.png");
-      background-repeat: no-repeat;
       background-position: 0 0;
+      background-repeat: no-repeat;
 
       @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
         background-image: url("../img/advantage-dining@2x.png");
@@ -99,8 +99,8 @@
       width: 50px;
       height: 50px;
       background-image: url("../img/advantage-clock@1x.png");
-      background-repeat: no-repeat;
       background-position: 0 0;
+      background-repeat: no-repeat;
 
       @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
         background-image: url("../img/advantage-clock@2x.png");
@@ -112,14 +112,14 @@
 
 @media (min-width: @tablet-width) {
   .benefits__title {
-    margin-top: 30px;
-    margin-bottom: 30px;
+    margin-top: 28px;
+    margin-bottom: 31px;
   }
 
   .benefits__text {
+    width: 246px;
     font-size: 16px;
     line-height: 24px;
-    width: 245px;
 
     &::before {
       top: -112px;
@@ -159,22 +159,23 @@
 
   .benefits__list {
     display: flex;
-    justify-content: space-between;
     flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 11px;
     padding-left: 0;
   }
 
   .benefits__item {
     position: relative;
     width: 325px;
-    padding-top: 137px;
     margin-bottom: 76px;
+    padding-top: 137px;
 
     &::before {
       content: "";
       position: absolute;
       top: 2px;
-      left: 120px;
+      left: 117px;
       font-size: 282px;
       line-height: 282px;
       color: @color-smoke;
@@ -189,21 +190,21 @@
     &--powder {
       &::before {
         content: "2";
-        left: 114px;
+        left: 111px;
       }
     }
 
     &--cutlery {
       &::before {
         content: "3";
-        left: 114px;
+        left: 112px;
       }
     }
 
     &--clock {
       &::before {
         content: "4";
-        left: 114px;
+        left: 113px;
       }
     }
   }
@@ -211,7 +212,7 @@
 
 @media (min-width: @desktop-width) {
   .benefits__title {
-    margin-top: 41px;
+    margin-top: 43px;
   }
 
   .benefits__item {

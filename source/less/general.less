@@ -1,3 +1,7 @@
+html {
+  overflow-x: hidden;
+}
+
 body {
   min-width: 320px;
   margin: 0;
@@ -6,12 +10,13 @@ body {
   font-size: 14px;
   line-height: 18px;
   font-weight: 400;
+  text-align: left;
   color: @color-charcoal;
   text-transform: none;
-  text-align: left;
   background-color: @color-white;
   background-position: top center;
   box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 a {
@@ -31,8 +36,8 @@ input[type="radio"].visually-hidden {
   width: 1px;
   height: 1px;
   margin: -1px;
-  border: 0;
   padding: 0;
+  border: 0;
   white-space: nowrap;
   clip: rect(0 0 0 0);
   overflow: hidden;

@@ -1,6 +1,6 @@
 .result {
-  background-color: @color-smoke;
   margin-top: 20px;
+  background-color: @color-smoke;
 }
 
 .result__wrap {
@@ -10,86 +10,87 @@
 
 .result__title {
   margin-top: 0;
-  margin-bottom: 22px;
-  padding-top: 18px;
+  margin-bottom: 23px;
+  padding-top: 17px;
 }
 
 .result__text {
-  font-family: "Arial", sans-serif;
   width: 279px;
-  margin: 0 auto;
   margin-bottom: 16px;
+  font-family: "Arial", sans-serif;
 }
 
 .result__list {
-  list-style: none;
   display: flex;
   justify-content: space-between;
   margin: 0;
   padding: 0;
+  list-style: none;
 }
 
 .result__item-number {
+  width: 123px;
+  margin: 0;
+  margin-top: 8px;
+  padding: 15px 0;
   font-size: 24px;
   line-height: 24px;
+  text-align: center;
   color: @color-black;
   text-transform: uppercase;
-  text-align: center;
-  width: 123px;
-  padding: 15px 0;
-  margin: 0;
-  margin-top: 9px;
   border: 1px solid #cdcdcd;
   border-radius: 1px;
 }
 
 .result__item-text {
+  width: 60px;
+  margin: 0 auto;
+  margin-top: -8px;
+  padding: 0 15px;
   font-family: "Arial", sans-serif;
   font-size: 12px;
   line-height: 12px;
   text-align: center;
   background-color: @color-smoke;
-  margin: 0 auto;
-  margin-top: -9px;
-  width: 60px;
-  padding: 0 15px;
 }
 
 .result__total {
+  padding-top: 6px;
   line-height: 18px;
+  text-align: center;
   color: @color-black;
   text-transform: uppercase;
-  text-align: center;
-  padding-top: 6px;
 }
 
 @media (min-width: @tablet-width) {
   .result {
+    margin-top: 0;
     background-color: @color-white;
-    margin-top: 11px;
-    border-top: 1px solid #e6e6e6a1;
+    border-top: 1px solid #e6e6e6;
   }
 
   .result__title {
+    margin-top: 15px;
+    padding-top: 28px;
     font-size: 60px;
     line-height: 60px;
-    margin-top: 25px;
   }
 
   .result__text {
+    width: 702px;
+    margin-bottom: 15px;
+    padding-top: 42px;
     font-size: 16px;
     line-height: 24px;
-    padding-top: 42px;
-    width: 702px;
   }
 
   .result__wrap {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding-top: 28px;
+    justify-content: space-between;
     width: 708px;
     margin-bottom: 45px;
+    padding-top: 28px;
   }
 
   .result__list {
@@ -98,69 +99,68 @@
   }
 
   .result__item-number {
-    font-size: 30px;
-    line-height: 37px;
     width: 160px;
-    padding: 16px 0;
     margin: 0;
     margin-top: 0;
+    padding: 16px 0;
+    font-size: 30px;
+    line-height: 37px;
   }
 
   .result__item-text {
-    font-size: 14px;
-    line-height: 14px;
     width: 130px;
     padding: 0 5px;
+    font-size: 14px;
+    line-height: 14px;
     background-color: @color-white;
   }
 
   .result__total {
     width: 192px;
+    margin-top: 0;
+    padding-top: 15px;
     font-size: 20px;
     line-height: 30px;
     text-align: right;
-    padding-top: 15px;
-    margin-top: 0;
   }
 }
 
 @media (min-width: @desktop-width) {
   .result {
-    border-top: none;
     margin-bottom: 0;
+    border-top: none;
   }
 
   .result__stat-container {
-    background-color: @color-smoke;
     padding-top: 0;
     padding-bottom: 50px;
+    background-color: @color-smoke;
   }
 
   .result__stat-wrapper {
-    width: 1220px;
-    margin: 0 auto;
     display: flex;
     justify-content: space-between;
+    width: 1220px;
+    margin: 0 auto;
     padding: 0;
   }
 
   .result__wrap {
-    width: 365px;
     flex-direction: column;
+    width: 365px;
     margin: 0;
     padding-top: 25px;
   }
 
   .result__stat-wrap {
-    margin: 0 auto;
     width: 570px;
-    padding-top: 27px;
+    padding: 26px 0 0 8px;
   }
 
   .result__total {
-    width: 366px;
+    width: 364px;
+    padding-top: 50px;
     text-align: left;
-    padding-top: 49px;
   }
 
   .result__total-sum {
@@ -168,8 +168,8 @@
   }
 
   .result__title {
-    padding-top: 11px;
     margin-bottom: 76px;
+    padding-top: 8px;
   }
 
   .result__text {
@@ -180,11 +180,11 @@
   }
 
   .result__item-number {
-    margin-top: -1;
+    padding: 14px 0 18px;
   }
 
   .result__item-text {
+    margin-top: -8px;
     background-color: @color-smoke;
-    margin-top: -7px;
   }
 }

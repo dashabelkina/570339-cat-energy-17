@@ -1,17 +1,14 @@
 .copyright__link {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
 }
 
 .copyright__text {
+  margin-left: -1px;
   font-family: "Arial", sans-serif;
   font-size: 16px;
   color: @color-charcoal;
-
-  &:active {
-    opacity: 0.3;
-  }
 }
 
 .copyright__icon {
@@ -23,16 +20,24 @@
 @media (min-width: @tablet-width) {
   .copyright__link {
     position: relative;
+
+    &:focus {
+      outline: 3px solid rgb(253, 137, 59);
+    }
   }
 
-  .copyright__text:active {
-    opacity: 0.3;
+  .copyright__text {
+    margin-left: 0;
+
+    &:active {
+      opacity: 0.3;
+    }
   }
 
   .copyright__icon {
     position: absolute;
-    top: -6px;
-    left: 136px;
+    top: -7px;
+    left: 137px;
 
     &:hover {
       fill: @color-apple;

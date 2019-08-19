@@ -6,9 +6,9 @@
   line-height: 18px;
   font-weight: 400;
   color: @color-white;
-  text-transform: uppercase;
   text-align: center;
   text-decoration: none;
+  text-transform: uppercase;
   background-color: @color-apple;
   border: none;
 
@@ -17,45 +17,50 @@
   }
 
   &:active {
-    background-color: @color-apple-dark;
     color: @color-white-light;
+    background-color: @color-apple-dark;
+  }
+
+  &:focus {
+    outline: 3px solid rgb(253, 137, 59);
   }
 }
 
 .button__more {
-  background-color: @color-smoke;
-  color: @color-charcoal;
+  margin: 0 auto;
   font-size: 16px;
   line-height: 20px;
-  margin: 0 auto;
+  color: @color-charcoal;
+  background-color: @color-smoke;
 
   &:hover {
     background-color: @color-smoke-dark;
   }
 
   &:active {
-    background-color: @color-smoke-dark;
     color: @color-charcoal-light;
+    background-color: @color-smoke-dark;
   }
 }
 
 .button__catalog {
-  font-size: 16px;
   margin-top: -3px;
+  font-size: 16px;
+  z-index: 1;
 }
 
 @media (min-width: @tablet-width) {
   .button__promo {
-    width: 245px;
     display: block;
+    width: 245px;
     padding: 16px 0;
     font-size: 20px;
     line-height: 20px;
     font-weight: 400;
     color: @color-white;
-    text-transform: uppercase;
     text-align: center;
     text-decoration: none;
+    text-transform: uppercase;
     background-color: @color-apple;
     border: none;
   }
@@ -67,6 +72,7 @@
 
   .button__catalog {
     margin-top: 2px;
+    margin-left: 1px;
   }
 }
 
