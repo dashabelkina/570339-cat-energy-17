@@ -22,9 +22,11 @@
               <img class="page-header__logo-image" src="img/logo-mobile.svg" width="191" height="38" alt="Логотип Cat Energy">
             </picture>
           </a>
-          <button class="page-header__toggle" type="button"><span class="visually-hidden">Меню</span></button>
         </div>
-        <nav class="main-nav main-nav__close main">
+        <nav class="main-nav main-nav--closed main-nav--nojs">
+          <div class="main-nav__toggle-wrap">
+            <button class="main-nav__toggle " type="button"><span class="visually-hidden">Меню</span></button>
+          </div>
           <div class="main-nav__wrapper">
             <ul class="main-nav__list site-list">
               <li class="site-list__item">
@@ -46,92 +48,92 @@
         <h2 class="programm__title title-block container">Подбор программы</h2>
         <p class="programm__desc container">Заполните анкету и мы подберем<br>
           программу питания для вашего кота</p>
-        <form class="programm__form" method="get" action="https://echo.htmlacademy.ru">
-          <div class="programm__form--section">
-            <div class="programm__form--wrap">
-              <div class="programm__form--item programm__form--item-text">
-                <div class="programm__form--block programm__text--block">
+        <form class="programm__form" method="POST" action="https://echo.htmlacademy.ru">
+          <div class="programm__section">
+            <div class="programm__wrap">
+              <div class="programm__text">
+                <div class="programm__text-wrap">
                   <label class="programm__label" for="name-field">Имя:*</label>
-                  <input class="programm__input programm__input--text" id="name-field" type="text" name="name" value="Барсик" placeholder="Имя" required="" autofocus="">
+                  <input class="programm__input programm__input-text" id="name-field" type="text" name="name" value="Барсик" placeholder="Имя" required="">
                 </div>
-                <div class="programm__form--block programm__text--block">
+                <div class="programm__text-wrap">
                   <label class="programm__label" for="weight-field">Вес (кг):*</label>
-                  <input class="programm__input programm__input--text programm__input--text-weight" id="weight-field" type="text" name="weight" value="7" placeholder="Вес" required="">
+                  <input class="programm__input programm__input-text programm__input-weight" id="weight-field" type="text" name="weight" value="7" placeholder="Вес" required="">
                 </div>
-                <div class="programm__form--block programm__text--block">
+                <div class="programm__text-wrap">
                   <label class="programm__label" for="age-field">Возраст&nbsp;(лет):</label>
-                  <input class="programm__input programm__input--text" id="age-field" type="text" name="age" value="7" placeholder="Возраст">
+                  <input class="programm__input programm__input-text" id="age-field" type="text" name="age" value="7" placeholder="Возраст">
                 </div>
               </div>
             </div>
-            <div class="programm__form--wrap">
-              <div class="programm__form--item programm__form--item-radio">
-                <div class="programm__form--block programm__radio--block">
-                  <input class="programm__input visually-hidden programm__input--radio" type="radio" name="radio" value="slim" id="slim-field" checked="">
+            <div class="programm__wrap">
+              <div class="programm__radio">
+                <div class="programm__radio-wrap">
+                  <input class="visually-hidden programm__input-radio" type="radio" name="radio" value="slim" id="slim-field" checked="">
                   <label class="programm__label" for="slim-field">Похудение</label>
                 </div>
-                <div class="programm__form--block programm__radio--block">
-                  <input class="programm__input visually-hidden programm__input--radio" type="radio" name="radio" value="pro" id="pro-field">
+                <div class="programm__radio-wrap">
+                  <input class="visually-hidden programm__input-radio" type="radio" name="radio" value="pro" id="pro-field">
                   <label class="programm__label" for="pro-field">Набор массы</label>
                 </div>
-                <div class="programm__form--block programm__radio--block">
-                  <input class="programm__input visually-hidden programm__input--radio" type="radio" name="radio" value="unknown" id="unknown-field">
+                <div class="programm__radio-wrap">
+                  <input class="visually-hidden programm__input-radio" type="radio" name="radio" value="unknown" id="unknown-field">
                   <label class="programm__label" for="unknown-field">Не знаю (Нужен ваш совет)</label>
                 </div>
               </div>
             </div>
           </div>
-          <div class="programm__form--item">
+          <div class="programm__contact">
             <div class="title-line title-line--contact">
-              <h2 class="programm__form--title container"><span>Контактные данные (владельца кота)</span></h2>
+              <h2 class="programm__subtitle container"><span>Контактные данные (владельца кота)</span></h2>
             </div>
-            <div class="programm__email--block">
-              <div class="programm__form--block programm__text--block programm__form--block-email">
-                <label class="programm__label programm__label--email" for="email-field">E-mail:*</label>
-                <input class="programm__input programm__input--email" id="email-field" type="email" name="email" value="kuklachev@gmail.com" placeholder="E-mail" required="">
+            <div class="programm__email">
+              <div class="programm__mailbox">
+                <label class="programm__label programm__label-email" for="email-field">E-mail:*</label>
+                <input class="programm__input programm__input-email" id="email-field" type="email" name="email" value="kuklachev@gmail.com" placeholder="E-mail" required="">
                 <svg class="programm__link programm__link--email" width="17" height="13"><use xlink:href="#icon-mail"></use></svg>
               </div>
-              <div class="programm__form--block programm__text--block programm__form--block-tel">
-                <label class="programm__label programm__label--tel" for="tel-field">Телефон:*</label>
-                <input class="programm__input programm__input--tel" id="tel-field" type="tel" name="tel" value="8 (960) 900-60-90" placeholder="Телефон" required="">
+              <div class="programm__tel">
+                <label class="programm__label programm__label-tel" for="tel-field">Телефон:*</label>
+                <input class="programm__input programm__input-tel" id="tel-field" type="tel" name="tel" value="8 (960) 900-60-90" placeholder="Телефон" required="">
                 <svg class="programm__link programm__link--tel" width="20" height="20"><use xlink:href="#icon-phone"></use></svg>
               </div>
             </div>
           </div>
-          <div class="programm__form--item">
+          <div class="programm__textarea textarea">
             <div class="title-line">
-              <h2 class="programm__form--title container"><span>Комментарий</span></h2>
+              <h2 class="programm__subtitle container"><span>Комментарий</span></h2>
             </div>
-            <textarea class="programm__textarea" name="feedback" placeholder="Расскажите обо всех повадках кота"></textarea>
+            <textarea class="textarea__text" name="feedback" placeholder="Расскажите обо всех повадках кота"></textarea>
           </div>
-          <div class="programm__form--item programm__form--item-checkbox">
+          <div class="programm__checkbox">
             <div class="title-line">
-              <h2 class="programm__form--title programm__form--title-checkbox container"><span>Дополнительно</span></h2>
+              <h2 class="programm__subtitle programm__subtitle-add container"><span>Дополнительно</span></h2>
             </div>
-            <div class="programm__checkbox--block-wrap container">
-              <div class="programm__form--block programm__checkbox--block">
-                <input class="programm__input visually-hidden programm__input--checkbox" type="checkbox" name="sweetener" value="sweetener" id="sweetener-field" checked="">
+            <div class="programm__checkbox-wrapper container">
+              <div class="programm__checkbox-wrap">
+                <input class="visually-hidden programm__input-checkbox" type="checkbox" name="sweetener" value="sweetener" id="sweetener-field" checked="">
                 <label class="programm__label" for="sweetener-field">Сахарозаменитель</label>
               </div>
-              <div class="programm__form--block programm__checkbox--block">
-                <input class="programm__input visually-hidden programm__input--checkbox" type="checkbox" name="water" value="water" id="water-field">
+              <div class="programm__checkbox-wrap">
+                <input class="visually-hidden programm__input-checkbox" type="checkbox" name="water" value="water" id="water-field">
                 <label class="programm__label" for="water-field">Питьевая вода</label>
               </div>
-              <div class="programm__form--block programm__checkbox--block">
-                <input class="programm__input visually-hidden programm__input--checkbox" type="checkbox" name="milk" value="milk" id="milk-field">
+              <div class="programm__checkbox-wrap">
+                <input class="visually-hidden programm__input-checkbox" type="checkbox" name="milk" value="milk" id="milk-field">
                 <label class="programm__label" for="milk-field">Молоко</label>
               </div>
-              <div class="programm__form--block programm__checkbox--block">
-                <input class="programm__input visually-hidden programm__input--checkbox" type="checkbox" name="vitamins" value="vitamins" id="vitamins-field">
+              <div class="programm__checkbox-wrap">
+                <input class="visually-hidden programm__input-checkbox" type="checkbox" name="vitamins" value="vitamins" id="vitamins-field">
                 <label class="programm__label" for="vitamins-field">Витамины</label>
               </div>
             </div>
           </div>
+          <div class="programm__footer container">
+            <button type="submit" class="programm__button button" href="#">Отправить заявку</button>
+            <p class="programm__required">* — Обязательные поля</p>
+          </div>
         </form>
-        <div class="programm__footer container">
-          <a class="programm__button button" href="#">Отправить заявку</a>
-          <p class="programm__text">* — Обязательные поля</p>
-        </div>
       </section>
     </main>
     <footer class="page-footer">
@@ -152,17 +154,17 @@
           <ul class="social__list">
             <li class="social__item">
               <a class="social__link" href="#" title="Вконтакте">
-                <svg class="social__link--vkontakte" width="22" height="12"><use xlink:href="#icon-vk"></use></svg>
+                <svg class="social__vkontakte" width="22" height="12"><use xlink:href="#icon-vk"></use></svg>
               </a>
             </li>
             <li class="social__item">
               <a class="social__link" href="#" title="Инстаграм">
-                <svg class="social__link--instagram" width="16.1" height="16"><use xlink:href="#icon-insta"></use></svg>
+                <svg class="social__instagram" width="16.1" height="16"><use xlink:href="#icon-insta"></use></svg>
               </a>
             </li>
             <li class="social__item">
               <a class="social__link" href="#" title="Фейсбук">
-                <svg class="social__link--facebook" width="19" height="19"><use xlink:href="#icon-fb"></use></svg>
+                <svg class="social__facebook" width="19" height="19"><use xlink:href="#icon-fb"></use></svg>
               </a>
             </li>
           </ul>

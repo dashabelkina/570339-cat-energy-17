@@ -22,9 +22,11 @@
               <img class="page-header__logo-image" src="img/logo-mobile.svg" width="191" height="38" alt="Логотип Cat Energy">
             </picture>
           </a>
-          <button class="page-header__toggle" type="button"><span class="visually-hidden">Меню</span></button>
         </div>
-        <nav class="main-nav main-nav__close main">
+        <nav class="main-nav main-nav--closed main-nav--nojs">
+          <div class="main-nav__toggle-wrap">
+            <button class="main-nav__toggle " type="button"><span class="visually-hidden">Меню</span></button>
+          </div>
           <div class="main-nav__wrapper">
             <ul class="main-nav__list site-list">
               <li class="site-list__item">
@@ -58,7 +60,7 @@
                 <img class="promo__image" src="img/index-can-mobile@1x.png" srcset="img/index-can-mobile@2x.png" width="280" height="270" alt="Cat Energy со вкусом курицы">
               </picture>
             </div>
-            <button class="button__promo button" type="button">Подобрать программу</button>
+            <a class="button__promo button">Подобрать программу</a>
           </div>
         </div>
       </section>
@@ -171,17 +173,17 @@
           <ul class="social__list">
             <li class="social__item">
               <a class="social__link" href="#" title="Вконтакте">
-                <svg class="social__link--vkontakte" width="22" height="12"><use xlink:href="#icon-vk"></use></svg>
+                <svg class="social__vkontakte" width="22" height="12"><use xlink:href="#icon-vk"></use></svg>
               </a>
             </li>
             <li class="social__item">
               <a class="social__link" href="#" title="Инстаграм">
-                <svg class="social__link--instagram" width="16.1" height="16"><use xlink:href="#icon-insta"></use></svg>
+                <svg class="social__instagram" width="16.1" height="16"><use xlink:href="#icon-insta"></use></svg>
               </a>
             </li>
             <li class="social__item">
               <a class="social__link" href="#" title="Фейсбук">
-                <svg class="social__link--facebook" width="19" height="19"><use xlink:href="#icon-fb"></use></svg>
+                <svg class="social__facebook" width="19" height="19"><use xlink:href="#icon-fb"></use></svg>
               </a>
             </li>
           </ul>

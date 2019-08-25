@@ -9,8 +9,8 @@
   text-transform: uppercase;
 }
 
-.programm__text {
-  margin-left: -1px;
+.programm__required {
+  margin-left: 1px;
   margin-bottom: 32px;
   font-family: "Arial", sans-serif;
   line-height: 16px;
@@ -25,66 +25,56 @@
   font-size: 16px;
   color: @color-nero;
   text-transform: uppercase;
-
-  &--block {
-    display: block;
-    margin-bottom: 34px;
-    font-size: 24px;
-    line-height: 24px;
-    color: @color-black;
-  }
-
-  &--email {
-    margin-right: 11px;
-  }
-
-  &--tel {
-    margin-right: 9px;
-  }
 }
 
-.programm__form {
-  &--item {
-    padding: 0;
-    border: none;
-  }
+.programm__label-email {
+  margin-right: 12px;
+}
 
-  &--block {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
+.programm__label-tel {
+  margin-right: 11px;
+}
 
-  &--title {
-    margin-bottom: 34px;
-    font-size: 24px;
-    line-height: 24px;
-    color: @color-black;
-  }
+.programm__subtitle {
+  margin-bottom: 34px;
+  font-size: 24px;
+  line-height: 24px;
+  color: @color-black;
+}
 
-  &--wrap {
-    position: relative;
+.programm__contact,
+.programm__textarea {
+  padding: 0;
+  border: none;
+}
 
-    &::before {
-      content: "";
-      position: absolute;
-      bottom: 0;
-      width: 100vw;
-      height: 1px;
-      background-color: #e6e6e6;
-    }
+.programm__wrap {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 100vw;
+    height: 1px;
+    background-color: #e6e6e6;
   }
 }
 
 /* text-block */
 
-.programm__form--item-text {
+.programm__text {
   width: 280px;
   margin: 0 auto;
+  padding: 0;
   padding-bottom: 10px;
+  border: none;
 }
 
-.programm__text--block {
+.programm__text-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   padding-bottom: 15px;
 }
 
@@ -104,48 +94,54 @@
   &:active,
   &:focus {
     border: 1px solid @color-charcoal;
-    outline: 3px solid rgb(253, 137, 59);
   }
 
   &:invalid {
     border: 1px solid #ff8282;
-
-    & + .programm__link {
-      fill: #ff8282;
-    }
   }
 }
 
-.programm__input--text {
+.programm__input:active + .programm__link,
+.programm__input:focus + .programm__link {
+  fill: @color-apple;
+}
+
+.programm__input:invalid + .programm__link {
+  fill: #ff8282;
+}
+
+.programm__input-text {
   display: flex;
   flex-grow: 1;
   width: 140px;
 }
 
-.programm__input--text-weight {
+.programm__input-weight {
   margin-left: 2px;
 }
 
 /* radio-block */
 
-.programm__form--item-radio {
+.programm__radio {
   width: 280px;
   margin: 0 auto;
   margin-bottom: 28px;
   padding: 26px 0 2px;
+  border: none;
 }
 
-.programm__radio--block {
+.programm__radio-wrap {
   display: flex;
   justify-content: flex-start;
+  align-items: center;
   padding-bottom: 25px;
 }
 
-.programm__input--radio {
+.programm__input-radio {
   & + label {
     position: relative;
     display: block;
-    padding-left: 46px;
+    padding-left: 47px;
     cursor: pointer;
 
     &::before {
@@ -179,17 +175,25 @@
     }
   }
 
-  &:active + label {
+  &:disabled + label {
     opacity: 0.3;
   }
 }
 
 /* email-block */
 
-.programm__email--block {
+.programm__email {
   position: relative;
   width: 280px;
   margin: 0 auto 14px;
+}
+
+.programm__mailbox,
+.programm__tel {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 15px;
 }
 
 .programm__link {
@@ -207,15 +211,11 @@
     top: 67px;
     left: 235px;
   }
-
-  &:active {
-    fill: @color-apple;
-  }
 }
 
 /* textarea-block */
 
-.programm__textarea {
+.textarea__text {
   display: block;
   width: 256px;
   min-height: 126px;
@@ -234,25 +234,27 @@
   &:active,
   &:focus {
     border: 1px solid @color-charcoal;
-    outline: 3px solid rgb(253, 137, 59);
   }
 }
 
 /* checkbox-block */
 
-.programm__form--item-checkbox {
+.programm__checkbox {
   margin-bottom: 23px;
+  padding: 0;
+  border: none;
 }
 
-.programm__checkbox--block {
+.programm__checkbox-wrap {
   display: flex;
-  justify-content: flex-start;
+  align-items: center;
+  justify-content: space-between;
   padding-top: 6px;
   padding-bottom: 18px;
   text-align: center;
 }
 
-.programm__input--checkbox {
+.programm__input-checkbox {
   & + label {
     position: relative;
     display: block;
@@ -263,9 +265,9 @@
       content: "";
       position: absolute;
       top: -5px;
-      left: 0;
-      width: 29px;
-      height: 29px;
+      left: 1px;
+      width: 28px;
+      height: 28px;
       background-color: @color-white;
       border: 1px solid #cdcdcd;
     }
@@ -289,34 +291,34 @@
     }
   }
 
-  &:active + label,
-  &:active + label::before,
-  &:active:checked + label::after {
+  &:disabled + label,
+  &:disabled + label::before,
+  &:disabled:checked + label::after {
     opacity: 0.3;
   }
 }
 
 /* focus outline */
 
-.programm__input--radio:focus + label::before,
-.programm__input--checkbox:focus + label::before,
-.programm__input--checkbox:focus:checked + label::before {
-  opacity: 1;
-  outline: 3px solid rgb(253, 137, 59);
+.programm__input-radio:focus + label::before,
+.programm__input-checkbox:focus + label::before,
+.programm__input-checkbox:focus:checked + label::before {
+  opacity: 0.3;
   outline-offset: 5px;
 }
 
 /* programm__footer */
 
 .programm__button {
-  margin-bottom: 22px;
-  padding: 10px 0;
+  width: 281px;
+  margin-bottom: 21px;
+  padding: 11px 0 10px;
   font-size: 16px;
   line-height: 20px;
 }
 
 @media (min-width: @tablet-width) {
-  .programm__form--section {
+  .programm__section {
     width: 708px;
     margin: 0 auto;
     padding: 0 30px;
@@ -327,13 +329,13 @@
     padding-top: 50px;
   }
 
-  .programm__form--wrap::before {
+  .programm__wrap::before {
     display: none;
   }
 
   .programm__desc {
+    width: 628px;
     margin-bottom: 65px;
-    padding-left: 70px;
     font-size: 20px;
     line-height: 30px;
   }
@@ -350,61 +352,61 @@
     height: 48px;
     font-size: 20px;
     line-height: 20px;
-
-    &--email {
-      margin-right: 4px;
-      margin-left: 14px;
-    }
-
-    &--tel {
-      margin-right: 2px;
-    }
   }
 
-  .programm__form--title {
+  .programm__input-email {
+    margin-right: 0;
+    margin-left: 16px;
+  }
+
+  .programm__input-tel {
+    margin-left: 12px;
+  }
+
+  .programm__subtitle {
     margin-bottom: 75px;
     padding: 0;
     font-size: 36px;
     line-height: 36px;
   }
 
-  .programm__form--item-text {
+  .programm__text {
     width: 628px;
     margin-bottom: 42px;
     padding-left: 5px;
   }
 
-  .programm__text--block {
+  .programm__text-wrap {
     width: 630px;
     padding-bottom: 20px;
   }
 
-  .programm__form--block {
-    width: inherit;
-
-    &-email {
-      padding-left: 5px;
-    }
-
-    &-tel {
-      padding-left: 2px;
-    }
+  .programm__mailbox {
+    width: 630px;
+    padding-left: 5px;
+    padding-bottom: 20px;
   }
 
-  .programm__email--block {
+  .programm__tel {
+    width: 635px;
+    padding-left: 2px;
+    padding-bottom: 20px;
+  }
+
+  .programm__email {
     width: 635px;
     margin-bottom: 46px;
     padding-right: 0;
   }
 
-  .programm__checkbox--block-wrap {
+  .programm__checkbox-wrapper {
     position: relative;
     left: 42px;
     display: flex;
     flex-wrap: wrap;
   }
 
-  .programm__checkbox--block {
+  .programm__checkbox-wrap {
     width: 287px;
     margin-right: 56px;
     padding-bottom: 36px;
@@ -413,8 +415,8 @@
   .programm__footer {
     display: flex;
     justify-content: left;
-    margin-bottom: 50px;
-    padding-left: 70px;
+    width: 627px;
+    margin-bottom: 51px;
   }
 
   .programm__button {
@@ -426,11 +428,11 @@
     line-height: 20px;
   }
 
-  .programm__radio--block {
+  .programm__radio-wrap {
     padding-bottom: 23px;
   }
 
-  .programm__form--item-radio {
+  .programm__radio {
     width: 570px;
     margin-bottom: 76px;
     margin-left: 41px;
@@ -438,7 +440,7 @@
     border: 1px solid #e6e6e6;
   }
 
-  .programm__input--radio {
+  .programm__input-radio {
     & + label {
       padding-left: 58px;
 
@@ -472,7 +474,7 @@
     }
   }
 
-  .programm__textarea {
+  .textarea__text {
     position: relative;
     left: 2px;
     width: 594px;
@@ -482,13 +484,13 @@
     line-height: 20px;
   }
 
-  .programm__input--checkbox {
+  .programm__input-checkbox {
     & + label {
-      padding-left: 57px;
+      padding-left: 58px;
 
       &::before {
         top: -4px;
-        left: -2px;
+        left: 0;
         width: 38px;
         height: 38px;
       }
@@ -503,27 +505,27 @@
     }
   }
 
-  .programm__form--title-checkbox {
+  .programm__subtitle-add {
     margin-bottom: 55px;
   }
 
-  .programm__form--item-checkbox {
+  .programm__checkbox {
     margin-top: 65px;
     margin-bottom: 24px;
   }
 
-  .programm__text {
-    padding-left: 63px;
+  .programm__required {
+    padding-left: 61px;
     font-size: 16px;
   }
 
-  .programm__input--text-weight {
+  .programm__input-weight {
     margin-left: 14px;
   }
 }
 
 @media (min-width: @desktop-width) {
-  .programm__form--section {
+  .programm__section {
     display: flex;
     justify-content: space-between;
     width: 1220px;
@@ -536,52 +538,57 @@
   }
 
   .programm__desc {
+    width: 1220px;
     margin-bottom: 65px;
-    padding-left: 40px;
+    padding: 0;
   }
 
   .programm__input {
-    margin-left: 10px;
+    margin-left: 12px;
     padding-left: 18px;
-
-    &--email {
-      margin-right: 1px;
-      margin-left: 16px;
-    }
-
-    &--tel {
-      margin-right: 0;
-      margin-left: 12px;
-    }
   }
 
-  .programm__text--block:last-child {
+  .programm__input-email {
+    margin-right: 1px;
+    margin-left: 16px;
+  }
+
+  .programm__input-tel {
+    margin-right: 0;
+    margin-left: 12px;
+  }
+
+  .programm__text-wrap {
+    width: 568px;
+  }
+
+  .programm__text-wrap:last-child {
     padding-bottom: 0;
   }
 
-  .programm__form--item-text {
+  .programm__text {
     width: 568px;
     margin: 0;
     padding-left: 2px;
   }
 
-  .programm__input--text-weight {
-    margin-left: 14px;
+  .programm__input-weight {
+    margin-left: 15px;
   }
 
-  .programm__form--item-radio {
+  .programm__radio {
     width: 512px;
     margin: 0;
     padding: 29px 28px 7px;
   }
 
-  .programm__input--radio {
+  .programm__input-radio {
     & + label {
-      padding-left: 58px;
+      padding-left: 60px;
 
       &::before {
         top: -5px;
-        left: -2px;
+        left: -1px;
         width: 40px;
         height: 40px;
       }
@@ -589,26 +596,27 @@
 
     &:checked + label::after {
       top: 7px;
-      left: 10px;
+      left: 11px;
     }
   }
 
-  .programm__email--block {
+  .programm__email {
     display: flex;
     justify-content: space-between;
     width: 1220px;
     margin-bottom: 68px;
   }
 
-  .programm__form--block-email {
+  .programm__mailbox {
     width: 570px;
-    margin-left: 1px;
+    margin-left: 2px;
     padding-left: 0;
     padding-bottom: 0;
   }
 
-  .programm__form--block-tel {
-    width: 572px;
+  .programm__tel {
+    width: 571px;
+    padding-bottom: 0;
   }
 
   .programm__link {
@@ -625,28 +633,28 @@
     }
   }
 
-  .programm__textarea {
+  .textarea__text {
     left: 0;
     width: 1183px;
     min-height: 141px;
     padding: 16px 17px 17px 19px;
   }
 
-  .programm__form--item-checkbox {
+  .programm__checkbox {
     margin-top: 66px;
     margin-bottom: 31px;
   }
 
-  .programm__form--title-checkbox {
+  .programm__subtitle-add {
     margin-bottom: 55px;
   }
 
-  .programm__checkbox--block-wrap {
+  .programm__checkbox-wrapper {
     width: 1220px;
     left: 0;
   }
 
-  .programm__checkbox--block {
+  .programm__checkbox-wrap {
     width: 245px;
     margin-right: 80px;
 
@@ -655,32 +663,32 @@
     }
   }
 
-  .programm__input--checkbox {
+  .programm__input-checkbox {
     & + label {
-      padding-left: 58px;
+      padding-left: 60px;
 
       &::before {
         top: -4px;
-        left: -1px;
+        left: 1px;
       }
     }
 
     &:checked + label::after {
-      left: 10px;
-      top: 7px;
+      left: 11px;
+      top: 8px;
     }
   }
 
   .programm__footer {
+    width: 1220px;
     margin-bottom: 61px;
-    padding-left: 40px;
   }
 
   .programm__button {
     width: 570px;
   }
 
-  .programm__text {
+  .programm__required {
     padding-left: 82px;
   }
 }

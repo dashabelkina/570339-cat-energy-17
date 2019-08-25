@@ -83,8 +83,8 @@
 @media (min-width: @tablet-width) {
   .slider {
     padding-top: 26px;
-    background: linear-gradient(to bottom, @color-white 196px, @color-smoke 196px),
-      linear-gradient(to right, @color-smoke 50%, #eaeaea 50%);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 1) 196px, rgba(242, 242, 242, 0) 196px),
+      linear-gradient(90deg, #f2f2f2 50%, #eaeaea 50%);
   }
 
   .slider__wrap {
@@ -157,10 +157,6 @@
       box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.25), inset 0 0 0 1px @color-apple;
       border: 1px solid @color-apple;
     }
-
-    &:focus {
-      outline: 3px solid rgb(253, 137, 59);
-    }
   }
 
   .slider__label {
@@ -175,10 +171,6 @@
 
     &:active {
       border-bottom: none;
-    }
-
-    &:focus {
-      outline: 3px solid rgb(253, 137, 59);
     }
   }
 
@@ -215,7 +207,7 @@
     width: 777px;
     margin: 0 auto;
     padding-top: 20px;
-    background: none;
+    background: linear-gradient(90deg, #f2f2f2 70.5%, #eaeaea 70.5%);
   }
 
   .slider__wrap {
@@ -241,6 +233,7 @@
     position: absolute;
     left: 215px;
     bottom: -49px;
+    background: linear-gradient(90deg, #f2f2f2 49.8%, #eaeaea 49.8%);
   }
 
   .slider__label {
