@@ -1,4 +1,4 @@
-# Личный проект «Кэт энерджи» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
+# Личный проект «Кэт энерджи»
 
 * Студент: [Даша Белкина](https://up.htmlacademy.ru/adaptive/17/user/570339).
 * Наставник: [Сергей Зубов](https://htmlacademy.ru/profile/serj).
